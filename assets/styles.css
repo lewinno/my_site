@@ -6,10 +6,10 @@
   --border-radius: 6px;
   --nav-spacing: 3em;
 
-  --color-bg:#9c3450;
+  --color-bg:#fea49f;
   --color-text: rgb(var(--color-text-raw-rgb));
   --color-primary: rgb(var(--color-primary-raw-rgb));
-  --color-secondary:#ffc68a;
+  --color-secondary:#007f4f;
   --color-text-semi-transparent-90: rgba(var(--color-text-raw-rgb), .9);
   --color-text-semi-transparent-80: rgba(var(--color-text-raw-rgb), .8);
   --color-semi-transparent-dark: rgba(0,0,0,.3);
@@ -99,46 +99,49 @@ code{font-size:.8em;color:var(--color-primary);background:var(--color-semi-trans
 }
 .btn.btn--outline{background:transparent;color:var(--color-text);border:1px solid var(--color-text)}
 
-/* ===== Footer ===== */
+/* === Footer (minimal) === */
 #footer{
-  font-size:.95rem;
-  padding:1.25rem 0 2.5rem;
-  color:var(--color-text-semi-transparent-80);
-  margin-top:2rem;
-  border-top:1px solid rgba(0,0,0,.2);
-}
-#footer-content{display:grid;grid-template-columns:1fr 1fr;grid-row-gap:.5rem}
-.footer-section{display:grid;grid-template-columns:1fr;grid-template-rows:repeat(2,1.5rem)}
-#footer-section-right{text-align:right}
-
-/* ===== Small screens ===== */
-@media (max-width:666px){
-  .page{font-size:.95rem}
-  #greeter .textbox{padding-right:0;max-width:none}
-  #footer-content{grid-template-columns:1fr}
-  #footer-section-right{text-align:left}
+  font-size: .95rem;
+  padding: 1.25rem 0 2.5rem;
+  color: var(--color-text-semi-transparent-80);
+  margin-top: 2rem;
+  border-top: 1px solid rgba(var(--color-text-raw-rgb), .55); /* light line */
 }
 
-/* Footer: white rule + single-line layout */
-#footer {
-  border-top: 1px solid rgba(var(--color-text-raw-rgb), .55); /* light/white line */
-}
-
-/* Put all footer items on one row */
-#footer-content {
-  display: flex;                 /* override previous grid */
+#footer-content{
+  display: flex;                 /* one row: left + right */
   align-items: center;
   justify-content: space-between;
   gap: 1rem;
 }
 
-.footer-section {
-  display: flex;                 /* make items inside each section sit inline */
+#footer-nav{
+  display: flex;                 /* Home • Research • CV on one line */
   align-items: center;
-  gap: 1rem;
+  flex-wrap: nowrap;
 }
 
-/* Optional: keep it readable on tiny screens */
-@media (max-width: 480px) {
-  #footer-content { flex-wrap: wrap; gap: .5rem 1rem; }
+#footer-nav a{
+  border-bottom: 1px solid var(--color-secondary); /* keep your link style */
+}
+
+#footer-nav a + a{ margin-left: .75rem; }
+#footer-nav a + a::before{
+  content: "•";
+  margin-right: .75rem;
+  color: var(--color-text-semi-transparent-80);
+  border-bottom: none;
+}
+
+/* tiny-screen fallback */
+@media (max-width: 480px){
+  #footer-content{ flex-wrap: wrap; row-gap: .25rem; }
+  #footer-nav{ flex-wrap: wrap; }
+}
+
+/* WIDTH OVERRIDE while tuning — remove !important when done */
+.page{
+  max-width: 600px !important;   /* pick the width you want (e.g., 560–640px) */
+  padding-left: 20px !important;
+  padding-right: 20px !important;
 }

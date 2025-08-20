@@ -28,7 +28,7 @@ jobs:
           SITE_TITLE: "Your Name"
           # If this is a project site (NOT username.github.io), set BASE_PATH to "/<repo-name>/"
           # For a user site (username.github.io), leave it as "/"
-          BASE_PATH: "/"
+          BASE_PATH: "/my_site/"
       - uses: actions/upload-pages-artifact@v3
         with:
           path: dist

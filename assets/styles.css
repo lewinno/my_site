@@ -6,10 +6,10 @@
   --border-radius: 6px;
   --nav-spacing: 3em;
 
-  --color-bg:#fea49f;
+  --color-bg:#9c3450;
   --color-text: rgb(var(--color-text-raw-rgb));
   --color-primary: rgb(var(--color-primary-raw-rgb));
-  --color-secondary:#007f4f;
+  --color-secondary:#ffc68a;
   --color-text-semi-transparent-90: rgba(var(--color-text-raw-rgb), .9);
   --color-text-semi-transparent-80: rgba(var(--color-text-raw-rgb), .8);
   --color-semi-transparent-dark: rgba(0,0,0,.3);
@@ -139,9 +139,3 @@ code{font-size:.8em;color:var(--color-primary);background:var(--color-semi-trans
   #footer-nav{ flex-wrap: wrap; }
 }
 
-/* WIDTH OVERRIDE while tuning — remove !important when done */
-.page{
-  max-width: 600px !important;   /* pick the width you want (e.g., 560–640px) */
-  padding-left: 20px !important;
-  padding-right: 20px !important;
-}

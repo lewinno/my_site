@@ -118,3 +118,27 @@ code{font-size:.8em;color:var(--color-primary);background:var(--color-semi-trans
   #footer-content{grid-template-columns:1fr}
   #footer-section-right{text-align:left}
 }
+
+/* Footer: white rule + single-line layout */
+#footer {
+  border-top: 1px solid rgba(var(--color-text-raw-rgb), .55); /* light/white line */
+}
+
+/* Put all footer items on one row */
+#footer-content {
+  display: flex;                 /* override previous grid */
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.footer-section {
+  display: flex;                 /* make items inside each section sit inline */
+  align-items: center;
+  gap: 1rem;
+}
+
+/* Optional: keep it readable on tiny screens */
+@media (max-width: 480px) {
+  #footer-content { flex-wrap: wrap; gap: .5rem 1rem; }
+}

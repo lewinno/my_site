@@ -23,15 +23,16 @@ jobs:
           node-version: 20
       - run: npm install
       - name: Build site
-        run: npm run build
         env:
           SITE_TITLE: "Your Name"
-          # If this is a project site (NOT username.github.io), set BASE_PATH to "/<repo-name>/"
-          # For a user site (username.github.io), leave it as "/"
-          BASE_PATH: "/my_site/"
+          BASE_PATH: "/my_site/"     # <-- must match your repo name exactly
+        run: |
+          echo "Using BASE_PATH=$BASE_PATH"
+          npm run build
       - uses: actions/upload-pages-artifact@v3
         with:
           path: dist
+
   deploy:
     needs: build
     runs-on: ubuntu-latest

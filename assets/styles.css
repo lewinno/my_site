@@ -15,8 +15,8 @@
   --color-semi-transparent-dark: rgba(0,0,0,.3);
 
   /* NEW: layout helpers */
-  --page-max: 820px;        /* width of the centered column */
-  --side-pad: 24px;         /* gutter on small/large screens */
+  --page-max: 660px;        /* width of the centered column */
+  --side-pad: 20px;         /* gutter on small/large screens */
 }
 
 /* ===== Layout ===== */

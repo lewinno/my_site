@@ -24,18 +24,19 @@
 
     <div class="footer-spacer"></div>
 
-    <footer id="footer">
-      <div id="footer-content">
-        <div class="footer-section">
-          <span>&copy; <span id="year"></span> {{site_title}}</span>
-          <span class="muted-tones"><a href="./">Home</a></span>
-        </div>
-        <div id="footer-section-right" class="footer-section">
-          <span><a href="research/">Research</a> • <a href="cv/">CV</a></span>
-          <span></span>
-        </div>
-      </div>
-    </footer>
+   <footer id="footer">
+  <div id="footer-content">
+    <span>&copy; <span id="year"></span> {{site_title}}</span>
+
+    <!-- Right-aligned footer nav: Home • Research • CV -->
+    <nav id="footer-nav">
+      <a href="./">Home</a>
+      <a href="research/">Research</a>
+      <a href="cv/">CV</a>
+    </nav>
+  </div>
+</footer>
+
   </div>
 
   <script>document.getElementById('year').textContent=new Date().getFullYear();</script>

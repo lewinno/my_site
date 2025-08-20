@@ -1,8 +1,13 @@
-# Hi, I'm Your Name
-
-Short sentence about who you are and what you do.
-
-<div class="btns">
-  <a class="btn" href="research/" role="button">Research</a>
-  <a class="btn" href="cv/" role="button">CV</a>
-</div>
+<section id="greeter">
+  <div class="textbox">
+    <h1>Hi, I'm Your Name</h1>
+    <p>Short sentence about who you are and what you do.</p>
+    <div class="btns">
+      <a class="btn" href="research/">Research</a>
+      <a class="btn btn--outline" href="cv/">CV</a>
+    </div>
+  </div>
+  <!-- Optional avatar:
+  <img class="avatar" src="assets/me.jpg" alt="Portrait">
+  -->
+</section>

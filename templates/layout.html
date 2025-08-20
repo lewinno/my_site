@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>{{title}} — {{site_title}}</title>
+
+  <!-- Set the base path so relative links/assets work on both username sites and project sites -->
+  <base href="{{base}}">
+  <link rel="stylesheet" href="assets/styles.css">
+  <meta name="color-scheme" content="light dark">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav">
+      <a href="./" class="nav__brand">{{site_title}}</a>
+      <div class="nav__links">
+        <a href="research/">Research</a>
+        <a href="cv/">CV</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="container">
+    {{content}}
+  </main>
+
+  <footer class="site-footer">
+    © <span id="year"></span> {{site_title}}
+  </footer>
+
+  <script>
+    // tiny enhancement: current year
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

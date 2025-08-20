@@ -1,0 +1,113 @@
+:root {
+  --bg: #ffffff;
+  --text: #111111;
+  --muted: #6b7280;
+  --link: #0a58ca;
+  --btn-bg: #111111;
+  --btn-text: #ffffff;
+  --border: #e5e7eb;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0b0b0c;
+    --text: #eaeaea;
+    --muted: #9aa0a6;
+    --link: #75a7ff;
+    --btn-bg: #eaeaea;
+    --btn-text: #0b0b0c;
+    --border: #222428;
+  }
+}
+
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+body {
+  font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji";
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 760px;
+  padding: 2rem 1.25rem;
+  margin: 0 auto;
+}
+
+.site-header {
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  backdrop-filter: blur(6px);
+  background: color-mix(in oklab, var(--bg) 85%, transparent);
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 920px;
+  margin: 0 auto;
+  padding: 0.75rem 1.25rem;
+}
+
+.nav a {
+  text-decoration: none;
+  color: var(--text);
+}
+
+.nav__brand {
+  font-weight: 600;
+}
+
+.nav__links a {
+  margin-left: 1rem;
+  color: var(--muted);
+}
+
+a { color: var(--link); }
+
+h1, h2, h3 {
+  line-height: 1.2;
+  margin: 0.8em 0 0.4em;
+}
+
+.hero {
+  margin-top: 2rem;
+}
+
+.btns {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  margin-top: 1.25rem;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.6rem 0.95rem;
+  border-radius: 999px;
+  background: var(--btn-bg);
+  color: var(--btn-text);
+  text-decoration: none;
+  border: 1px solid var(--border);
+}
+
+.btn:focus-visible {
+  outline: 3px solid color-mix(in oklab, var(--link) 60%, transparent);
+  outline-offset: 2px;
+}
+
+.card {
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1rem;
+}
+.site-footer {
+  border-top: 1px solid var(--border);
+  max-width: 920px;
+  margin: 2rem auto 0;
+  padding: 1rem 1.25rem 3rem;
+  color: var(--muted);
+}

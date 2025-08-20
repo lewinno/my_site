@@ -1,0 +1,12 @@
+{
+  "name": "vanilla-tiny-build-site",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node build.mjs"
+  },
+  "dependencies": {
+    "marked": "^12.0.2"
+  }
+}
